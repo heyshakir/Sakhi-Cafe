@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sakhi Cafe – Fresh Coffee, Delicious Moments. Premium café experience with artisan coffee, delicious food, and a cozy atmosphere." />
+  <title>Sakhi Cafe – Fresh Coffee, Delicious Moments</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>" />
+</head>
+
+<body>
+
+  <!-- ──────────────────────────────────────────────────────────
+     NAVIGATION
+─────────────────────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">☕</div>
+        <span class="nav-logo-text">Sakhi<span> Cafe</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="menu.html" class="btn btn-primary">Order Now</a>
+      </div>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="#about">About</a>
+    <a href="menu.html" class="btn btn-primary" style="text-align:center;margin-top:8px">Order Now</a>
+  </div>
+
+  <!-- ──────────────────────────────────────────────────────────
+     HERO SECTION
+─────────────────────────────────────────────────────────── -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+      <!-- Left: Content -->
+      <div class="hero-content">
+        <div class="hero-tag">
+          <div class="hero-tag-dot"></div>
+          Now Open · Dine In & Takeaway
+        </div>
+        <h1 class="hero-title">Sakhi <span>Cafe</span></h1>
+        <p class="hero-tagline">"Fresh Coffee, Delicious Moments"</p>
+        <p class="hero-desc">
+          Welcome to Sakhi Cafe — where every cup tells a story. We craft artisan
+          coffee, serve chef-made dishes, and create a warm, cozy space where
+          moments turn into memories.
+        </p>
+        <div class="hero-btns">
+          <a href="menu.html" class="btn btn-primary">🍽️ View Menu</a>
+          <a href="contact.html" class="btn btn-outline">📍 Find Us</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">50<span>+</span></div>
+            <div class="hero-stat-label">Menu Items</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">5K<span>+</span></div>
+            <div class="hero-stat-label">Happy Guests</div>
+          </div>
+          <div class="hero-stat-item">
+            <div class="hero-stat-num">8<span>yr</span></div>
+            <div class="hero-stat-label">Of Excellence</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Visual -->
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <div class="hero-img-glow"></div>
+          <img src="images/Pasta 🍲🍲.jpg" alt="Signature dish at Sakhi Cafe" class="hero-img-main" />
+
+          <!-- Floating Card 1 -->
+          <div class="hero-float-card card-1">
+            <div class="float-icon">⭐</div>
+            <div>
+              <div class="float-text-label">Customer Rating</div>
+              <div class="float-text-value">4.9 / 5.0</div>
+            </div>
+          </div>
+
+          <!-- Floating Card 2 -->
+          <div class="hero-float-card card-2">
+            <div class="float-icon">☕</div>
+            <div>
+              <div class="float-text-label">Served Today</div>
+              <div class="float-text-value">340+ Orders</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────────────────────
+     FEATURED DISHES
+─────────────────────────────────────────────────────────── -->
+  <section class="white-section section-pad" id="dishes">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="badge">Our Specialties</span>
+        <h2 class="section-title">Featured <span style="color:var(--orange)">Dishes</span></h2>
+        <p class="section-sub">Handcrafted with love using the freshest ingredients, our most-loved dishes that keep
+          guests coming back for more.</p>
+      </div>
+
+      <div class="featured-grid">
+        <!-- Card 1 -->
+        <div class="dish-card reveal reveal-delay-1">
+          <div class="dish-card-img-wrap">
+            <img src="images/food.png" alt="Grilled Chicken Platter" class="dish-card-img" />
+            <span class="dish-card-tag">Chef's Pick</span>
+          </div>
+          <div class="dish-card-body">
+            <div class="dish-card-name">Grilled Chicken Platter</div>
+            <div class="dish-card-desc">Juicy grilled chicken with seasonal greens, roasted potatoes, and our signature
+              house sauce.</div>
+            <div class="dish-card-footer">
+              <div class="dish-price">Rs. 450</div>
+              <button class="dish-order-btn" title="Add to order">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="dish-card reveal reveal-delay-2">
+          <div class="dish-card-img-wrap">
+            <img src="images/Pasta 🍲🍲.jpg" alt="Creamy Pasta" class="dish-card-img" />
+            <span class="dish-card-tag">Bestseller</span>
+          </div>
+          <div class="dish-card-body">
+            <div class="dish-card-name">Creamy Pasta</div>
+            <div class="dish-card-desc">Al dente pasta in a rich, velvety cream sauce with aromatic herbs and fresh
+              parmesan.</div>
+            <div class="dish-card-footer">
+              <div class="dish-price">Rs. 380</div>
+              <button class="dish-order-btn" title="Add to order">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="dish-card reveal reveal-delay-3">
+          <div class="dish-card-img-wrap">
+            <img src="images/Tasty Barbecued Chicken Dishes.jpg" alt="BBQ Chicken" class="dish-card-img" />
+            <span class="dish-card-tag">Hot & Spicy</span>
+          </div>
+          <div class="dish-card-body">
+            <div class="dish-card-name">BBQ Chicken Delight</div>
+            <div class="dish-card-desc">Smoky barbecued chicken glazed with our secret sauce, served with coleslaw and
+              crispy fries.</div>
+            <div class="dish-card-footer">
+              <div class="dish-price">Rs. 520</div>
+              <button class="dish-order-btn" title="Add to order">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="dish-card reveal reveal-delay-1">
+          <div class="dish-card-img-wrap">
+            <img src="images/Pasta🍝.jpg" alt="Pasta Primavera" class="dish-card-img" />
+            <span class="dish-card-tag">Vegetarian</span>
+          </div>
+          <div class="dish-card-body">
+            <div class="dish-card-name">Pasta Primavera</div>
+            <div class="dish-card-desc">Loaded with garden-fresh vegetables in a light tomato-basil sauce. A colorful,
+              healthy choice.</div>
+            <div class="dish-card-footer">
+              <div class="dish-price">Rs. 320</div>
+              <button class="dish-order-btn" title="Add to order">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="dish-card reveal reveal-delay-2">
+          <div class="dish-card-img-wrap">
+            <img src="images/Pin su Yumminess XXV.jpg" alt="Special Snack" class="dish-card-img" />
+            <span class="dish-card-tag">Top Rated</span>
+          </div>
+          <div class="dish-card-body">
+            <div class="dish-card-name">Yumminess Snack Box</div>
+            <div class="dish-card-desc">A curated box of café favorites — crispy bites, dips, and flavors that satisfy
+              every craving.</div>
+            <div class="dish-card-footer">
+              <div class="dish-price">Rs. 290</div>
+              <button class="dish-order-btn" title="Add to order">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="dish-card reveal reveal-delay-3">
+          <div class="dish-card-img-wrap">
+            <img src="images/download (15).jpg" alt="Special Coffee" class="dish-card-img" />
+            <span class="dish-card-tag">Signature</span>
+          </div>
+          <div class="dish-card-body">
+            <div class="dish-card-name">Sakhi Special Coffee</div>
+            <div class="dish-card-desc">Our barista's signature blend — bold espresso with silky microfoam art and a
+              hint of vanilla.</div>
+            <div class="dish-card-footer">
+              <div class="dish-price">Rs. 180</div>
+              <button class="dish-order-btn" title="Add to order">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:40px">
+        <a href="menu.html" class="btn btn-outline-dark">View Full Menu →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────────────────────
+     WHY CHOOSE US
+─────────────────────────────────────────────────────────── -->
+  <section class="light-section section-pad" id="about">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="badge">Why Sakhi Cafe</span>
+        <h2 class="section-title">What Makes Us <span style="color:var(--orange)">Special</span></h2>
+        <p class="section-sub">We're more than just a café. We're a community, a tradition, and a daily ritual for those
+          who love great food and great vibes.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card reveal reveal-delay-1">
+          <div class="why-card-icon">🌿</div>
+          <div class="why-card-title">Fresh Ingredients</div>
+          <div class="why-card-text">We source locally grown, seasonal ingredients. Every dish is made to order using
+            only the freshest produce.</div>
+        </div>
+        <div class="why-card reveal reveal-delay-2">
+          <div class="why-card-icon">☕</div>
+          <div class="why-card-title">Expert Baristas</div>
+          <div class="why-card-text">Our certified baristas craft every cup with precision — from classic espresso to
+            creative specialty brews.</div>
+        </div>
+        <div class="why-card reveal reveal-delay-3">
+          <div class="why-card-icon">🪑</div>
+          <div class="why-card-title">Cozy Atmosphere</div>
+          <div class="why-card-text">A warm, welcoming space designed for comfort — perfect for meetings, dates, or a
+            quiet moment alone.</div>
+        </div>
+        <div class="why-card reveal reveal-delay-4">
+          <div class="why-card-icon">⚡</div>
+          <div class="why-card-title">Fast Service</div>
+          <div class="why-card-text">We respect your time. Quick preparation and attentive service ensure you never have
+            to wait too long.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────────────────────
+     SIGNATURE DISH / DARK FEATURE
+─────────────────────────────────────────────────────────── -->
+  <section class="dark-section section-pad">
+    <div class="container">
+      <div class="signature-inner">
+        <!-- Left content -->
+        <div class="sig-content reveal-left">
+          <span class="badge">Signature Experience</span>
+          <h2 class="sig-title">Make Every<br /><span>Bite</span> Count</h2>
+          <p class="sig-desc">
+            Our signature platters are a symphony of flavors. Each dish is crafted
+            with time-honored recipes, perfected over years of culinary excellence
+            at Sakhi Cafe.
+          </p>
+          <div class="sig-features">
+            <div class="sig-feature-item">
+              <div class="sig-feature-dot">✓</div>
+              Premium quality ingredients sourced daily
+            </div>
+            <div class="sig-feature-item">
+              <div class="sig-feature-dot">✓</div>
+              Chef-crafted recipes with authentic flavors
+            </div>
+            <div class="sig-feature-item">
+              <div class="sig-feature-dot">✓</div>
+              Beautifully plated for a premium experience
+            </div>
+            <div class="sig-feature-item">
+              <div class="sig-feature-dot">✓</div>
+              Customizable to suit your dietary needs
+            </div>
+          </div>
+          <a href="menu.html" class="btn btn-primary">Order Now →</a>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="sig-visual reveal-right">
+          <img src="images/fooood.png" alt="Sakhi Cafe signature dish" class="sig-img" />
+          <div class="sig-img-badge">
+            <div class="sig-badge-num">⭐ 4.9</div>
+            <div class="sig-badge-text">Top Rated Dish</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────────────────────
+     GALLERY PREVIEW
+─────────────────────────────────────────────────────────── -->
+  <section class="white-section section-pad">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="badge">Food Gallery</span>
+        <h2 class="section-title">A Feast for the <span style="color:var(--orange)">Eyes</span></h2>
+        <p class="section-sub">A visual journey through our most beloved dishes and memorable café moments.</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <div class="gallery-item tall">
+          <img src="images/food.png" alt="Food at Sakhi" />
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon">🔍</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Pasta 🍲🍲.jpg" alt="Pasta dish" />
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon">🔍</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/hero.png" alt="Cafe ambience" />
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon">🔍</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Pasta🍝.jpg" alt="Pasta primavera" />
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon">🔍</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/Tasty Barbecued Chicken Dishes.jpg" alt="BBQ Chicken" />
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-icon">🔍</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:36px">
+        <a href="gallery.html" class="btn btn-outline-dark">View Full Gallery →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────────────────────
+     CONTACT PREVIEW
+─────────────────────────────────────────────────────────── -->
+  <section class="light-section section-pad" id="contact">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="badge">Get In Touch</span>
+        <h2 class="section-title">Visit <span style="color:var(--orange)">Sakhi Cafe</span></h2>
+        <p class="section-sub">We'd love to see you! Come in, sit down, and let us take care of you.</p>
+      </div>
+
+      <div class="contact-inner">
+        <!-- Info -->
+        <div>
+          <div class="contact-detail-list reveal-left">
+            <div class="contact-detail-item">
+              <div class="contact-icon" style="background:var(--orange-glow)">📍</div>
+              <div>
+                <div class="contact-detail-label">Address</div>
+                <div class="contact-detail-value">Shop 12, Baker Street, Gulshan-e-Iqbal, Karachi</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-icon">📞</div>
+              <div>
+                <div class="contact-detail-label">Phone</div>
+                <div class="contact-detail-value">+92 300 1234567</div>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-icon">✉️</div>
+              <div>
+                <div class="contact-detail-label">Email</div>
+                <div class="contact-detail-value">hello@sakhicafe.pk</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hours-card reveal-left reveal-delay-2">
+            <div class="hours-title">⏰ Opening Hours</div>
+            <div class="hours-row"><span>Monday – Friday</span><span>8:00 AM – 11:00 PM</span></div>
+            <div class="hours-row"><span>Saturday</span><span>9:00 AM – 12:00 AM</span></div>
+            <div class="hours-row"><span>Sunday</span><span>10:00 AM – 10:00 PM</span></div>
+            <div class="hours-row"><span>Public Holidays</span><span>10:00 AM – 9:00 PM</span></div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrap reveal-right">
+          <div class="form-title">Send Us a Message 💬</div>
+          <form class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="home-name">Your Name</label>
+                <input type="text" id="home-name" class="form-input" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="home-email">Email</label>
+                <input type="email" id="home-email" class="form-input" placeholder="you@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="home-msg">Message</label>
+              <textarea id="home-msg" class="form-textarea" placeholder="Reservations, feedback, or just saying hi..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">Send Message →</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.3374958498843!2d67.06658!3d24.9008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDU0JzAyLjkiTiA2N8KwMDMnNTkuNyJF!5e0!3m2!1sen!2s!4v1600000000000!5m2!1sen!2s"
+          title="Sakhi Cafe Location" style="border:0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────────────────────────────────────────────────
+     FOOTER
+─────────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="nav-logo" style="margin-bottom:16px; display:inline-flex">
+            <div class="nav-logo-icon">☕</div>
+            <span class="nav-logo-text">Sakhi<span> Cafe</span></span>
+          </a>
+          <p class="footer-brand-desc">Where every sip and every bite tells a story of passion, quality, and warmth.
+            Visit us and make memories.</p>
+          <div class="footer-socials">
+            <a class="footer-social" href="#" title="Instagram">📷</a>
+            <a class="footer-social" href="#" title="Facebook">👥</a>
+            <a class="footer-social" href="#" title="Twitter">🐦</a>
+            <a class="footer-social" href="#" title="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <div class="footer-col-title">Quick Links</div>
+          <ul class="footer-ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Menu Highlights -->
+        <div>
+          <div class="footer-col-title">Our Menu</div>
+          <ul class="footer-ul">
+            <li><a href="menu.html">Coffee & Tea</a></li>
+            <li><a href="menu.html">Pasta & Mains</a></li>
+            <li><a href="menu.html">Grills & BBQ</a></li>
+            <li><a href="menu.html">Snacks & Bites</a></li>
+            <li><a href="menu.html">Desserts</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <div class="footer-col-title">Contact Us</div>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Shop 12, Baker Street, Gulshan-e-Iqbal, Karachi</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>📞</span>
+            <span>+92 300 1234567</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <span>hello@sakhicafe.pk</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>⏰</span>
+            <span>Mon–Fri: 8 AM – 11 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Sakhi Cafe. All rights reserved.</span>
+        <span>Made with ❤️ for coffee lovers</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <button class="lightbox-nav lightbox-prev" onclick="lightboxPrev()">‹</button>
+    <img class="lightbox-img" src="" alt="Gallery image" />
+    <button class="lightbox-nav lightbox-next" onclick="lightboxNext()">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

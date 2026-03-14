@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sakhi Cafe Menu – Explore our wide range of coffees, teas, pasta, grills, snacks and desserts." />
+  <title>Menu – Sakhi Cafe</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .menu-hero-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      margin-bottom: 32px;
+    }
+    .menu-item-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .menu-item-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.13);
+    }
+    .menu-item-img-wrap { position: relative; overflow: hidden; }
+    .menu-item-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .menu-item-card:hover .menu-item-img { transform: scale(1.07); }
+    .menu-item-tag {
+      position: absolute;
+      top: 12px; left: 12px;
+      background: var(--orange);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+    .menu-item-body { padding: 18px; flex: 1; display: flex; flex-direction: column; }
+    .menu-item-name { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .menu-item-desc { font-size: 0.83rem; color: var(--grey); line-height: 1.5; flex: 1; margin-bottom: 14px; }
+    .menu-item-footer { display: flex; align-items: center; justify-content: space-between; }
+    .menu-item-price { font-size: 1.15rem; font-weight: 800; color: var(--orange); }
+    .add-to-order-btn {
+      display: flex; align-items: center; gap: 6px;
+      background: var(--orange);
+      color: white;
+      border-radius: 50px;
+      padding: 8px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      font-family: inherit;
+    }
+    .add-to-order-btn:hover { background: var(--orange-lit); transform: scale(1.05); }
+    .menu-banner {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--charcoal) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 64px;
+    }
+    .menu-banner-text { color: var(--white); }
+    .menu-banner-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; }
+    .menu-banner-title span { color: var(--orange); }
+    .menu-banner-sub { font-size: 0.92rem; color: #888; }
+    @media (max-width: 768px) {
+      .menu-banner { grid-template-columns: 1fr; text-align: center; padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">☕</div>
+      <span class="nav-logo-text">Sakhi<span> Cafe</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Order Now</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary" style="text-align:center;margin-top:8px">Order Now</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-overlay"></div>
+  <div class="page-header-content container">
+    <span class="badge">Our Menu</span>
+    <h1 class="page-header-title">Explore Our <span>Menu</span></h1>
+    <p class="page-header-sub">From artisan coffee to chef-crafted mains — something for every craving</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Menu</span>
+    </div>
+  </div>
+</div>
+
+<!-- MENU CONTENT -->
+<section class="white-section section-pad">
+  <div class="container">
+
+    <!-- Banner -->
+    <div class="menu-banner reveal">
+      <div class="menu-banner-text">
+        <div class="menu-banner-title">Fresh Daily · <span>Made with Love</span></div>
+        <div class="menu-banner-sub">All our dishes are prepared fresh every day. No frozen shortcuts — just real, wholesome food.</div>
+      </div>
+      <a href="contact.html" class="btn btn-primary">Reserve a Table</a>
+    </div>
+
+    <!-- Tabs -->
+    <div class="menu-tabs reveal">
+      <button class="menu-tab active" data-cat="coffee">☕ Coffee</button>
+      <button class="menu-tab" data-cat="tea">🍵 Tea</button>
+      <button class="menu-tab" data-cat="snacks">🍟 Snacks</button>
+      <button class="menu-tab" data-cat="mains">🍽️ Mains</button>
+      <button class="menu-tab" data-cat="desserts">🍰 Desserts</button>
+      <button class="menu-tab" data-cat="specials">✨ Specials</button>
+    </div>
+
+    <!-- COFFEE -->
+    <div class="menu-category active" id="cat-coffee">
+      <div class="menu-item-card reveal reveal-delay-1">
+        <div class="menu-item-img-wrap">
+          <img src="images/download (15).jpg" alt="Espresso" class="menu-item-img" />
+          <span class="menu-item-tag">Classic</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Classic Espresso</div>
+          <div class="menu-item-desc">Rich, bold double shot of our house espresso blend. Strong start to any day.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 120</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-2">
+        <div class="menu-item-img-wrap">
+          <img src="images/download (15).jpg" alt="Cappuccino" class="menu-item-img" />
+          <span class="menu-item-tag">Popular</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Creamy Cappuccino</div>
+          <div class="menu-item-desc">Perfectly balanced espresso with steamed milk and a thick layer of velvety foam.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 160</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-3">
+        <div class="menu-item-img-wrap">
+          <img src="images/download (15).jpg" alt="Sakhi Special Latte" class="menu-item-img" />
+          <span class="menu-item-tag">Signature</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Sakhi Special Latte</div>
+          <div class="menu-item-desc">Our signature blend with vanilla syrup, silky microfoam art, and a caramel drizzle.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 180</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-1">
+        <div class="menu-item-img-wrap">
+          <img src="images/download (15).jpg" alt="Cold Brew" class="menu-item-img" />
+          <span class="menu-item-tag">Chilled</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Smooth Cold Brew</div>
+          <div class="menu-item-desc">Slow-steeped overnight for 12 hours. Ultra-smooth, low-acid, and wonderfully refreshing.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 200</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-2">
+        <div class="menu-item-img-wrap">
+          <img src="images/download (15).jpg" alt="Mocha" class="menu-item-img" />
+          <span class="menu-item-tag">Sweet</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Dark Chocolate Mocha</div>
+          <div class="menu-item-desc">Espresso blended with rich chocolate, steamed milk, and topped with whipped cream.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 190</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-3">
+        <div class="menu-item-img-wrap">
+          <img src="images/download (15).jpg" alt="Iced Latte" class="menu-item-img" />
+          <span class="menu-item-tag">Refreshing</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Iced Caramel Latte</div>
+          <div class="menu-item-desc">Chilled espresso over ice with creamy milk and a generous caramel sauce swirl.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 175</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEA -->
+    <div class="menu-category" id="cat-tea">
+      <div class="menu-item-card reveal reveal-delay-1">
+        <div class="menu-item-img-wrap">
+          <img src="images/download (15).jpg" alt="Masala Chai" class="menu-item-img" />
+          <span class="menu-item-tag">Traditional</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Masala Chai</div>
+          <div class="menu-item-desc">Classic Pakistani masala chai brewed with fresh ginger, cardamom, and aromatic spices.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 80</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-2">
+        <div class="menu-item-img-wrap">
+          <img src="images/download (15).jpg" alt="Green Tea" class="menu-item-img" />
+          <span class="menu-item-tag">Healthy</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Premium Green Tea</div>
+          <div class="menu-item-desc">Delicate, antioxidant-rich green tea with a refreshing citrus & mint garnish.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 100</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-3">
+        <div class="menu-item-img-wrap">
+          <img src="images/download (15).jpg" alt="Kashmiri Tea" class="menu-item-img" />
+          <span class="menu-item-tag">Special</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Kashmiri Pink Tea</div>
+          <div class="menu-item-desc">The iconic pink tea topped with crushed pistachios and almonds. A café favourite.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 150</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SNACKS -->
+    <div class="menu-category" id="cat-snacks">
+      <div class="menu-item-card reveal reveal-delay-1">
+        <div class="menu-item-img-wrap">
+          <img src="images/Pin su Yumminess XXV.jpg" alt="Snack Box" class="menu-item-img" />
+          <span class="menu-item-tag">Top Rated</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Yumminess Snack Box</div>
+          <div class="menu-item-desc">A selection of café bites — crispy tenders, loaded nachos, and assorted dips.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 290</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-2">
+        <div class="menu-item-img-wrap">
+          <img src="images/Pin su Yumminess XXV.jpg" alt="Café Fries" class="menu-item-img" />
+          <span class="menu-item-tag">Crispy</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Loaded Café Fries</div>
+          <div class="menu-item-desc">Crispy golden fries topped with cheese sauce, jalapeños, and sour cream dip.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 220</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-3">
+        <div class="menu-item-img-wrap">
+          <img src="images/Pin su Yumminess XXV.jpg" alt="Club Sandwich" class="menu-item-img" />
+          <span class="menu-item-tag">Hearty</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Triple Club Sandwich</div>
+          <div class="menu-item-desc">Three layers of toasted bread with grilled chicken, fresh veggies, and mayo.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 350</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAINS -->
+    <div class="menu-category" id="cat-mains">
+      <div class="menu-item-card reveal reveal-delay-1">
+        <div class="menu-item-img-wrap">
+          <img src="images/Pasta 🍲🍲.jpg" alt="Creamy Pasta" class="menu-item-img" />
+          <span class="menu-item-tag">Bestseller</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Creamy Pasta</div>
+          <div class="menu-item-desc">Rich cream sauce with al dente pasta, fresh herbs, and Parmesan.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 380</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-2">
+        <div class="menu-item-img-wrap">
+          <img src="images/Pasta🍝.jpg" alt="Pasta Primavera" class="menu-item-img" />
+          <span class="menu-item-tag">Veg</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Pasta Primavera</div>
+          <div class="menu-item-desc">Light tomato-basil sauce loaded with countryside vegetables — fresh and colorful.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 320</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-3">
+        <div class="menu-item-img-wrap">
+          <img src="images/Tasty Barbecued Chicken Dishes.jpg" alt="Grilled Chicken" class="menu-item-img" />
+          <span class="menu-item-tag">Chef's Pick</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Grilled Chicken Platter</div>
+          <div class="menu-item-desc">Juicy grilled chicken with roasted potato wedges and house sauce.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 450</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-1">
+        <div class="menu-item-img-wrap">
+          <img src="images/Tasty Barbecued Chicken Dishes.jpg" alt="BBQ Chicken" class="menu-item-img" />
+          <span class="menu-item-tag">Spicy</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">BBQ Chicken Delight</div>
+          <div class="menu-item-desc">Smoky, glazed BBQ chicken served with coleslaw and our secret hot sauce.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 520</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-2">
+        <div class="menu-item-img-wrap">
+          <img src="images/food.png" alt="Special Platter" class="menu-item-img" />
+          <span class="menu-item-tag">Premium</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Sakhi Grand Platter</div>
+          <div class="menu-item-desc">The ultimate sharing platter — grilled meats, sides, dips, and more. For 2–3 people.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 950</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="menu-category" id="cat-desserts">
+      <div class="menu-item-card reveal reveal-delay-1">
+        <div class="menu-item-img-wrap">
+          <img src="images/fooood.png" alt="Chocolate Lava Cake" class="menu-item-img" />
+          <span class="menu-item-tag">Indulgent</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Chocolate Lava Cake</div>
+          <div class="menu-item-desc">Warm, gooey chocolate center with a scoop of vanilla ice cream. Pure bliss.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 280</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-2">
+        <div class="menu-item-img-wrap">
+          <img src="images/fooood.png" alt="Cheesecake" class="menu-item-img" />
+          <span class="menu-item-tag">Creamy</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Baked Cheesecake</div>
+          <div class="menu-item-desc">New York-style baked cheesecake on a buttery graham cracker crust with berry compote.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 260</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-3">
+        <div class="menu-item-img-wrap">
+          <img src="images/fooood.png" alt="Tiramisu" class="menu-item-img" />
+          <span class="menu-item-tag">Italian</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Classic Tiramisu</div>
+          <div class="menu-item-desc">Mascarpone cream, espresso-soaked ladyfingers, and a generous dusting of cocoa.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 300</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPECIALS -->
+    <div class="menu-category" id="cat-specials">
+      <div class="menu-item-card reveal reveal-delay-1">
+        <div class="menu-item-img-wrap">
+          <img src="images/food.png" alt="Sakhi Special" class="menu-item-img" />
+          <span class="menu-item-tag">Today's Special</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Sakhi's Chef Special</div>
+          <div class="menu-item-desc">Our daily chef's creation using the finest seasonal ingredients. Ask your server for today's offering.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Ask Us</div>
+            <button class="add-to-order-btn">Inquire</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-2">
+        <div class="menu-item-img-wrap">
+          <img src="images/fooood.png" alt="Weekend Brunch" class="menu-item-img" />
+          <span class="menu-item-tag">Weekend Only</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Weekend Brunch Box</div>
+          <div class="menu-item-desc">A lavish spread for two — eggs, pastries, juice, coffee, and seasonal sides. Weekends only.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 750</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+      <div class="menu-item-card reveal reveal-delay-3">
+        <div class="menu-item-img-wrap">
+          <img src="images/Tasty Barbecued Chicken Dishes.jpg" alt="Family Feast" class="menu-item-img" />
+          <span class="menu-item-tag">Family Deal</span>
+        </div>
+        <div class="menu-item-body">
+          <div class="menu-item-name">Family Feast Package</div>
+          <div class="menu-item-desc">4 mains + 4 drinks + 2 desserts at a special family price. Perfect for dining together.</div>
+          <div class="menu-item-footer">
+            <div class="menu-item-price">Rs. 1,800</div>
+            <button class="add-to-order-btn">+ Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo" style="margin-bottom:16px; display:inline-flex">
+          <div class="nav-logo-icon">☕</div>
+          <span class="nav-logo-text">Sakhi<span> Cafe</span></span>
+        </a>
+        <p class="footer-brand-desc">Where every sip and every bite tells a story of passion, quality, and warmth.</p>
+        <div class="footer-socials">
+          <a class="footer-social" href="#" title="Instagram">📷</a>
+          <a class="footer-social" href="#" title="Facebook">👥</a>
+          <a class="footer-social" href="#" title="Twitter">🐦</a>
+          <a class="footer-social" href="#" title="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-ul">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Our Menu</div>
+        <ul class="footer-ul">
+          <li><a href="menu.html">Coffee & Tea</a></li>
+          <li><a href="menu.html">Pasta & Mains</a></li>
+          <li><a href="menu.html">Grills & BBQ</a></li>
+          <li><a href="menu.html">Snacks & Bites</a></li>
+          <li><a href="menu.html">Desserts</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+        <div class="footer-contact-item"><span>📍</span><span>Shop 12, Baker Street, Gulshan-e-Iqbal, Karachi</span></div>
+        <div class="footer-contact-item"><span>📞</span><span>+92 300 1234567</span></div>
+        <div class="footer-contact-item"><span>✉️</span><span>hello@sakhicafe.pk</span></div>
+        <div class="footer-contact-item"><span>⏰</span><span>Mon–Fri: 8 AM – 11 PM</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sakhi Cafe. All rights reserved.</span>
+      <span>Made with ❤️ for coffee lovers</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

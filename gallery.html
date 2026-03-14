@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sakhi Cafe Gallery – A visual feast of our food, coffees, and café ambience." />
+  <title>Gallery – Sakhi Cafe</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .gallery-masonry {
+      columns: 3;
+      column-gap: 16px;
+    }
+    .gallery-masonry .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .gallery-masonry .gallery-item img {
+      width: 100%;
+      height: auto;
+      min-height: 180px;
+      display: block;
+    }
+    .gallery-filter-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    .filter-btn {
+      padding: 9px 22px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.87rem;
+      background: transparent;
+      color: var(--grey);
+      border: 2px solid rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--orange);
+      color: white;
+      border-color: var(--orange);
+      box-shadow: 0 4px 16px rgba(232,76,30,0.3);
+    }
+    @media (max-width: 768px) {
+      .gallery-masonry { columns: 2; }
+    }
+    @media (max-width: 480px) {
+      .gallery-masonry { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">☕</div>
+      <span class="nav-logo-text">Sakhi<span> Cafe</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="menu.html" class="btn btn-primary">Order Now</a>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  <a href="menu.html" class="btn btn-primary" style="text-align:center;margin-top:8px">Order Now</a>
+</div>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-overlay"></div>
+  <div class="page-header-content container">
+    <span class="badge">Visual Stories</span>
+    <h1 class="page-header-title">Our <span>Gallery</span></h1>
+    <p class="page-header-sub">A feast for the eyes — our food, coffee, and café in all its glory</p>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Gallery</span>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY SECTION -->
+<section class="white-section section-pad">
+  <div class="container">
+    <!-- Filter Buttons -->
+    <div class="gallery-filter-btns reveal">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">Food</button>
+      <button class="filter-btn">Coffee</button>
+      <button class="filter-btn">Ambience</button>
+    </div>
+
+    <!-- Masonry Gallery -->
+    <div class="gallery-masonry reveal">
+      <div class="gallery-item">
+        <img src="images/hero.png" alt="Sakhi Cafe Ambience" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/food.png" alt="Grilled Platter" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Pasta 🍲🍲.jpg" alt="Creamy Pasta" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/fooood.png" alt="Signature Dish" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Pasta🍝.jpg" alt="Pasta Primavera" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Tasty Barbecued Chicken Dishes.jpg" alt="BBQ Chicken" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Pin su Yumminess XXV.jpg" alt="Yumminess Snack" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/download (15).jpg" alt="Coffee Art" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <!-- Repeat for richer grid -->
+      <div class="gallery-item">
+        <img src="images/food.png" alt="Food Spread" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/hero.png" alt="Café Vibe" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/Pasta 🍲🍲.jpg" alt="Pasta Bowl" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/fooood.png" alt="Chef's Creation" />
+        <div class="gallery-overlay"><div class="gallery-overlay-icon">🔍</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="nav-logo" style="margin-bottom:16px; display:inline-flex">
+          <div class="nav-logo-icon">☕</div>
+          <span class="nav-logo-text">Sakhi<span> Cafe</span></span>
+        </a>
+        <p class="footer-brand-desc">Where every sip and every bite tells a story of passion, quality, and warmth.</p>
+        <div class="footer-socials">
+          <a class="footer-social" href="#" title="Instagram">📷</a>
+          <a class="footer-social" href="#" title="Facebook">👥</a>
+          <a class="footer-social" href="#" title="Twitter">🐦</a>
+          <a class="footer-social" href="#" title="WhatsApp">💬</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-ul">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Our Menu</div>
+        <ul class="footer-ul">
+          <li><a href="menu.html">Coffee & Tea</a></li>
+          <li><a href="menu.html">Pasta & Mains</a></li>
+          <li><a href="menu.html">Grills & BBQ</a></li>
+          <li><a href="menu.html">Snacks & Bites</a></li>
+          <li><a href="menu.html">Desserts</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact Us</div>
+        <div class="footer-contact-item"><span>📍</span><span>Shop 12, Baker Street, Gulshan-e-Iqbal, Karachi</span></div>
+        <div class="footer-contact-item"><span>📞</span><span>+92 300 1234567</span></div>
+        <div class="footer-contact-item"><span>✉️</span><span>hello@sakhicafe.pk</span></div>
+        <div class="footer-contact-item"><span>⏰</span><span>Mon–Fri: 8 AM – 11 PM</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sakhi Cafe. All rights reserved.</span>
+      <span>Made with ❤️ for coffee lovers</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="lightboxPrev()">‹</button>
+  <img class="lightbox-img" src="" alt="Gallery" />
+  <button class="lightbox-nav lightbox-next" onclick="lightboxNext()">›</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+  // Filter functionality
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      // All images shown regardless for now since we only have user images
+      // Future: add data-category attributes for filtering
+    });
+  });
+</script>
+</body>
+</html>
